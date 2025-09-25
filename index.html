@@ -8,20 +8,46 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <div class="logo">Gwenchana</div>
-      <nav class="nav">
-        <a href="#features" data-i18n="nav_features">Features</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
-        <a href="#download" data-i18n="nav_download">Download</a>
-      </nav>
+  <header class="header" id="appBar">
+    <div class="header-surface">
+      <div class="header-inner">
+        <a href="#" class="logo" aria-label="Gwenchana home">
+          <img src="assets/logo.png" alt="Gwenchana logo">
+        </a>
+        <div class="nav-wrapper">
+          <nav class="nav" id="primaryNav">
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">
+              <span class="menu-icon" aria-hidden="true">☰</span>
+              <span data-i18n="nav_menu">Menu</span>
+            </button>
+            <div class="nav-links" id="navLinks">
+              <a href="#about" data-i18n="nav_about">About</a>
+              <a href="#features" data-i18n="nav_features">Features</a>
+              <a href="#faq" data-i18n="nav_faq">FAQ</a>
+              <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
+            </div>
+          </nav>
 
-      <!-- Language Switcher -->
-      <div class="lang-switch">
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('ru')">RU</button>
-        <button onclick="setLanguage('ko')">한국어</button>
+          <!-- Language Switcher -->
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+              <span class="flag">🇺🇸</span>
+              <span class="label">EN</span>
+              <span class="chevron">▾</span>
+            </button>
+            <ul class="lang-menu" id="langMenu" role="listbox" tabindex="-1" aria-label="Select language">
+              <li role="option" aria-selected="false">
+                <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span>English</span></button>
+              </li>
+              <li role="option" aria-selected="false">
+                <button class="lang-option" data-lang="ru"><span class="flag">🇷🇺</span><span>Русский</span></button>
+              </li>
+              <li role="option" aria-selected="false">
+                <button class="lang-option" data-lang="ko"><span class="flag">🇰🇷</span><span>한국어</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -29,19 +55,46 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-text">
-        <h1 data-i18n="hero_title">Learn Korean smarter with AI</h1>
-        <p data-i18n="hero_subtitle">Prepare for KIIP levels with vocabulary, grammar, writing & reading.</p>
-        <div class="hero-btns">
-          <a href="#" class="btn store-btn"> <span data-i18n="btn_appstore">App Store</span></a>
-          <a href="#" class="btn store-btn">▶ <span data-i18n="btn_googleplay">Google Play</span></a>
+      <div class="hero-copy">
+        <h1 class="hero-title" data-i18n="hero_heading">Gwenchana</h1>
+        <p class="hero-subtitle hero-subtitle--center">
+          <span data-i18n="hero_tagline">Not just another Korean learning app</span>
+          <span class="hero-word" aria-hidden="true">괜찮아</span>
+        </p>
+        <p class="hero-support" data-i18n="hero_support">AI tutor makes Korean grammar easier to understand</p>
+        <div class="hero-btns hero-btns--center">
+          <a href="#" class="btn store-btn appstore">
+            <span class="store-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" focusable="false">
+                <path fill="currentColor" d="M17.54 12.46c-.02-1.62.73-2.84 2.32-3.74-.87-1.26-2.19-1.94-3.94-2.06-1.65-.13-3.45.96-4.12.96-.71 0-2.33-.92-3.59-.92-2.64.04-5.47 2.15-5.47 6.41 0 1.26.23 2.56.69 3.91.61 1.76 2.83 6.06 5.14 5.99 1.21-.03 2.06-.86 3.63-.86 1.53 0 2.31.86 3.64.86 2.33-.04 4.29-3.94 4.89-5.72-3.11-1.47-2.78-4.31-2.79-4.83zm-2.22-8.1c1.26-1.53 1.14-2.92 1.11-3.36-1.11.06-2.38.76-3.1 1.65-.79.97-1.25 2.16-1.15 3.42 1.19.09 2.28-.52 3.14-1.71z"/>
+              </svg>
+            </span>
+            <span class="store-content">
+              <small data-i18n="btn_appstore_pretitle">Download on the</small>
+              <span data-i18n="btn_appstore">App Store</span>
+            </span>
+          </a>
+          <a href="#" class="btn store-btn playstore">
+            <span class="store-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" focusable="false">
+                <path fill="#00A0FF" d="M47.6 30.2c-5.8 5.4-9.2 13.8-9.2 24.2v403.2c0 10.4 3.4 18.8 9.2 24.2l223.7-224.9L47.6 30.2z"/>
+                <path fill="#00E3FF" d="M356.3 327.8l-84.9-84.9-223.7 224.9c5.2 4.8 12.1 7.6 20.5 7.6 5.6 0 12.1-1.4 19.1-4.9l268.9-142.7z"/>
+                <path fill="#FFCE00" d="M356.3 184.2l-84.9 84.8 84.9 84.9 120.5-63.9c12.3-6.5 19.5-18.9 19.5-33.9 0-15-7.2-27.4-19.5-33.9l-120.5-63.9z"/>
+                <path fill="#FF3A44" d="M47.6 30.2l308.7 170.6 84.9-84.9L92.2 25.3c-7-3.5-13.5-4.9-19.1-4.9-8.4 0-15.3 2.8-20.5 9.8z"/>
+              </svg>
+            </span>
+            <span class="store-content">
+              <small data-i18n="btn_googleplay_pretitle">Get it on</small>
+              <span data-i18n="btn_googleplay">Google Play</span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section id="features" class="section features">
+  <section id="features" class="section features screen-section">
     <div class="container">
       <h2 data-i18n="features_title">Why Gwenchana?</h2>
       <ul>
@@ -52,8 +105,28 @@
     </div>
   </section>
 
+  <!-- About -->
+  <section id="about" class="section about screen-section">
+    <div class="container about-inner">
+      <div class="about-copy">
+        <h2 data-i18n="about_title">Built with learners first</h2>
+        <p data-i18n="about_body">Gwenchana is created by KIIP alumni and Korean teachers who collaborate with AI engineers. Together we map every lesson to real cultural scenarios so you can learn language that actually lands in conversation.</p>
+      </div>
+      <div class="about-points">
+        <div class="about-card">
+          <h3 data-i18n="about_card1_title">Community wisdom</h3>
+          <p data-i18n="about_card1_body">Weekly focus groups with expats and locals shape the curriculum.</p>
+        </div>
+        <div class="about-card">
+          <h3 data-i18n="about_card2_title">AI you can trust</h3>
+          <p data-i18n="about_card2_body">Every explanation is reviewed by certified instructors before launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
-  <section id="faq" class="section faq">
+  <section id="faq" class="section faq screen-section">
     <div class="container">
       <h2 data-i18n="faq_title">FAQ</h2>
       <div class="faq-item">
@@ -64,7 +137,7 @@
   </section>
 
   <!-- Download -->
-  <section id="download" class="section download">
+  <section id="download" class="section download screen-section">
     <div class="container">
       <h2 data-i18n="download_title">Download Gwenchana</h2>
       <p data-i18n="download_subtitle">Start your free trial today.</p>
