@@ -7,26 +7,37 @@ const translations = {
       nav_menu: "Menu",
       hero_heading: "Gwenchana",
       hero_tagline: "Not just another Korean learning app",
-      hero_support: "AI tutor makes Korean grammar easier to understand",
+      hero_support: "AI tutor makes understanding easier and keeps you motivated to practice every day",
       btn_appstore_pretitle: "Download on the",
       btn_appstore: "App Store",
       btn_googleplay_pretitle: "Get it on",
       btn_googleplay: "Google Play",
       features_title: "Why Gwenchana?",
-      features_item1: "📚 Structured KIIP lessons",
-      features_item2: "🤖 AI tutor explains grammar clearly",
-      features_item3: "📝 Practice vocabulary, writing & reading",
+      features_multi_title: "Multi-language Support",
+      features_multi_desc: "Supports multiple languages with full localization.",
+      features_auth_title: "Secure Authentication",
+      features_auth_desc: "Log in with email, Google, or Facebook in seconds.",
+      features_vocab_title: "Vocabulary Workouts",
+      features_vocab_desc: "Interactive drills and flashcards keep new words fresh.",
+      features_progress_title: "Progress Tracking",
+      features_progress_desc: "Visualize your gains across every KIIP level.",
+      features_ai_title: "AI Tutor",
+      features_ai_desc: "Personalized explanations from an always-on AI coach.",
+      features_offline_title: "Create Your Own Cards",
+      features_offline_desc: "Add words, translations, and examples to study your way.",
+      vocab_pill: "Interactive preview",
+      vocab_title: "Build your vocabulary",
+      vocab_body: "Tap a Korean word to reveal the translation in your language. Track your progress and enjoy learning with interactive flashcards.",
+      vocab_hint_show: "Tap to reveal translation",
+      vocab_hint_hide: "Tap to hide translation",
+      vocab_prev: "Previous word",
+      vocab_next: "Next word",
       faq_title: "FAQ",
       faq_q1: "Is Gwenchana good for beginners?",
       faq_a1: "Yes, you can start with simple words and guided practice.",
       download_title: "Download Gwenchana",
       download_subtitle: "Start your free trial today.",
-      about_title: "Built with learners first",
-      about_body: "Gwenchana is created by KIIP alumni and Korean teachers who collaborate with AI engineers. Together we map every lesson to real cultural scenarios so you can learn language that actually lands in conversation.",
-      about_card1_title: "Community wisdom",
-      about_card1_body: "Weekly focus groups with expats and locals shape the curriculum.",
-      about_card2_title: "AI you can trust",
-      about_card2_body: "Every explanation is reviewed by certified instructors before launch."
+      
     },
     ru: {
       nav_features: "Возможности",
@@ -36,26 +47,38 @@ const translations = {
       nav_menu: "Меню",
       hero_heading: "Gwenchana",
       hero_tagline: "Не просто очередное приложение для изучения корейского",
-      hero_support: "ИИ-репетитор делает корейскую грамматику понятной",
+      hero_support: "ИИ-репетитор помогает быстрее понимать и мотивирует практиковаться каждый день",
       btn_appstore_pretitle: "Скачать в",
       btn_appstore: "App Store",
       btn_googleplay_pretitle: "Доступно в",
       btn_googleplay: "Google Play",
       features_title: "Почему Gwenchana?",
-      features_item1: "📚 Структурированные уроки KIIP",
-      features_item2: "🤖 AI-репетитор объясняет грамматику просто",
-      features_item3: "📝 Практика слов, письма и чтения",
+      features_multi_title: "Поддержка нескольких языков",
+      features_multi_desc: "Локализация интерфейса на нескольких языках.",
+      features_auth_title: "Безопасная авторизация",
+      features_auth_desc: "Вход по email, Google или Facebook за секунды.",
+      features_vocab_title: "Тренировки словаря",
+      features_vocab_desc: "Интерактивные упражнения и карточки закрепляют новые слова.",
+      features_progress_title: "Отслеживание прогресса",
+      features_progress_desc: "Наглядно видите рост на каждом уровне KIIP.",
+      features_ai_title: "AI-репетитор",
+      features_ai_desc: "Персональные объяснения от наставника на базе ИИ 24/7.",
+      features_offline_title: "Создавайте свои карточки",
+      features_offline_desc: "Добавляйте слова, переводы и примеры под ваш стиль обучения.",
+      vocab_pill: "Интерактивный превью",
+      vocab_title: "Прокачайте словарный запас",
+      vocab_body: "Нажмите на корейское слово, чтобы увидеть перевод на своём языке. Отслеживайте прогресс и учитесь с интерактивными карточками.",
+      vocab_hint_show: "Нажмите, чтобы показать перевод",
+      vocab_hint_hide: "Нажмите, чтобы скрыть перевод",
+      vocab_prev: "Предыдущее слово",
+      vocab_next: "Следующее слово",
+      vocab_progress: "Слово",
       faq_title: "Часто задаваемые вопросы",
       faq_q1: "Подходит ли Gwenchana для новичков?",
       faq_a1: "Да, вы можете начать с простых слов и пошаговой практики.",
       download_title: "Скачать Gwenchana",
       download_subtitle: "Начните бесплатный пробный период уже сегодня.",
-      about_title: "Создано для учеников",
-      about_body: "Команда Gwenchana — выпускники KIIP, преподаватели корейского и инженеры ИИ. Вместе мы привязываем уроки к реальным культурным ситуациям, чтобы вы усваивали язык, который работает в диалоге.",
-      about_card1_title: "Мудрость сообщества",
-      about_card1_body: "Еженедельные группы экспатов и местных помогают формировать программу.",
-      about_card2_title: "Надёжный ИИ",
-      about_card2_body: "Каждое объяснение проверяет сертифицированный преподаватель перед релизом."
+      
     },
     ko: {
       nav_features: "기능",
@@ -65,26 +88,38 @@ const translations = {
       nav_menu: "메뉴",
       hero_heading: "Gwenchana",
       hero_tagline: "그저 그런 한국어 학습 앱이 아니에요",
-      hero_support: "AI 튜터가 한국어 문법을 더 쉽게 풀어줘요",
+      hero_support: "AI 튜터가 이해를 돕고 매일 학습하도록 동기부여해요",
       btn_appstore_pretitle: "App Store에서",
       btn_appstore: "앱스토어",
       btn_googleplay_pretitle: "Google Play에서",
       btn_googleplay: "구글 플레이",
       features_title: "왜 Gwenchana?",
-      features_item1: "📚 KIIP 단계별 수업",
-      features_item2: "🤖 AI 튜터가 문법을 쉽게 설명해줍니다",
-      features_item3: "📝 어휘, 쓰기, 읽기 모두 한 앱에서",
+      features_multi_title: "다국어 지원",
+      features_multi_desc: "여러 언어로 현지화된 인터페이스를 제공합니다.",
+      features_auth_title: "안전한 로그인",
+      features_auth_desc: "이메일, Google, Facebook으로 간편하게 로그인하세요.",
+      features_vocab_title: "어휘 트레이닝",
+      features_vocab_desc: "상호작용 연습과 플래시카드로 새 단어를 탄탄히.",
+      features_progress_title: "진행 상황 추적",
+      features_progress_desc: "KIIP 단계별 성장을 시각적으로 확인하세요.",
+      features_ai_title: "AI 튜터",
+      features_ai_desc: "언제든지 개인화된 설명을 제공하는 AI 코치.",
+      features_offline_title: "직접 만드는 단어 카드",
+      features_offline_desc: "단어·번역·예문을 추가해 나만의 학습 세트를 만드세요.",
+      vocab_pill: "인터랙티브 프리뷰",
+      vocab_title: "어휘를 쌓아가요",
+      vocab_body: "한국어 단어를 눌러 선택한 언어로 번역을 확인하세요. 진행 상황을 따라가며 인터랙티브 플래시카드로 즐겁게 학습하세요.",
+      vocab_hint_show: "탭하여 번역 보기",
+      vocab_hint_hide: "탭하여 번역 숨기기",
+      vocab_prev: "이전 단어",
+      vocab_next: "다음 단어",
+      vocab_progress: "단어",
       faq_title: "FAQ",
       faq_q1: "초보자에게도 좋나요?",
       faq_a1: "네, 기본 단어와 가이드 연습부터 시작할 수 있습니다.",
       download_title: "Gwenchana 다운로드",
       download_subtitle: "오늘 무료 체험을 시작하세요.",
-      about_title: "학습자를 먼저 생각합니다",
-      about_body: "Gwenchana는 KIIP 졸업생과 한국어 선생님, AI 엔지니어가 함께 만들었습니다. 모든 레슨을 실제 문화 상황에 맞춰 설계해 대화에서 통하는 표현을 배울 수 있게 해요.",
-      about_card1_title: "커뮤니티 인사이트",
-      about_card1_body: "주간 포커스 그룹에서 외국인과 현지인이 커리큘럼을 함께 다듬습니다.",
-      about_card2_title: "신뢰할 수 있는 AI",
-      about_card2_body: "모든 설명은 출시 전에 공인 강사가 검수합니다."
+      
     }
   };
   
@@ -94,6 +129,177 @@ const translations = {
     ru: { label: 'RU', name: 'Русский', flag: '🇷🇺' },
     ko: { label: 'KO', name: '한국어', flag: '🇰🇷' },
   };
+
+  let activeLang = 'en';
+
+  const vocabDeck = [
+    { word: '안녕하세요', translations: { en: 'Hello', ru: 'Привет', ko: 'Hello' } },
+    { word: '감사합니다', translations: { en: 'Thank you', ru: 'Спасибо', ko: 'Thank you' } },
+    { word: '사랑', translations: { en: 'Love', ru: 'Любовь', ko: 'Love' } },
+    { word: '학교', translations: { en: 'School', ru: 'Школа', ko: 'School' } },
+    { word: '음식', translations: { en: 'Food', ru: 'Еда', ko: 'Food' } },
+    { word: '가족', translations: { en: 'Family', ru: 'Семья', ko: 'Family' } },
+    { word: '책', translations: { en: 'Book', ru: 'Книга', ko: 'Book' } }
+  ];
+
+  const vocabState = { index: 0, revealed: false };
+  const vocabEls = {};
+
+  function getCopy(key, lang = activeLang) {
+    return translations[lang]?.[key] ?? translations.en?.[key] ?? '';
+  }
+
+  function renderVocabCard() {
+    if (!vocabEls.card) return;
+    const entry = vocabDeck[vocabState.index];
+    const lang = activeLang;
+    const translated = entry.translations[lang] ?? entry.translations.en;
+
+    if (vocabEls.word) {
+      vocabEls.word.textContent = entry.word;
+    }
+    if (vocabEls.translation) {
+      vocabEls.translation.textContent = translated;
+      const displayLang = lang === 'ru' ? 'ru' : 'en';
+      vocabEls.translation.setAttribute('lang', displayLang);
+    }
+    vocabEls.card.classList.toggle('is-flipped', vocabState.revealed);
+    vocabEls.card.setAttribute('aria-pressed', vocabState.revealed ? 'true' : 'false');
+    if (vocabEls.hint) {
+      vocabEls.hint.textContent = getCopy(vocabState.revealed ? 'vocab_hint_hide' : 'vocab_hint_show');
+    }
+    if (vocabEls.current) {
+      vocabEls.current.textContent = String(vocabState.index + 1);
+    }
+    if (vocabEls.total) {
+      vocabEls.total.textContent = String(vocabDeck.length);
+    }
+    updateVocabControls();
+  }
+
+  function launchConfetti() {
+    if (!vocabEls.confetti) return;
+    const colors = ['#6366f1', '#22d3ee', '#fb7185', '#facc15', '#34d399'];
+    const pieceCount = 24;
+    for (let i = 0; i < pieceCount; i += 1) {
+      const piece = document.createElement('span');
+      piece.className = 'confetti-piece';
+      piece.style.left = `${Math.random() * 100}%`;
+      piece.style.setProperty('--cx', `${Math.random() * 180 - 90}px`);
+      piece.style.backgroundColor = colors[i % colors.length];
+      piece.style.animationDelay = `${Math.random() * 0.35}s`;
+      vocabEls.confetti.appendChild(piece);
+      setTimeout(() => piece.remove(), 1700);
+    }
+    spawnFireworks(colors);
+  }
+
+  function spawnFireworks(colors) {
+    if (!vocabEls.confetti) return;
+    const bursts = 4;
+    for (let i = 0; i < bursts; i += 1) {
+      const firework = document.createElement('span');
+      firework.className = 'firework';
+      firework.style.left = `${15 + Math.random() * 70}%`;
+      firework.style.top = `${20 + Math.random() * 40}%`;
+      firework.style.setProperty('--fire-color', colors[(i * 2) % colors.length]);
+      firework.style.animationDelay = `${i * 0.1}s`;
+      vocabEls.confetti.appendChild(firework);
+      setTimeout(() => firework.remove(), 1500);
+    }
+  }
+
+  function updateVocabControls() {
+    if (vocabEls.prev) {
+      vocabEls.prev.disabled = vocabState.index === 0;
+    }
+    if (vocabEls.next && !vocabEls.next.dataset.locked) {
+      vocabEls.next.disabled = false;
+    }
+  }
+
+  function cycleVocab(direction) {
+    if (!vocabDeck.length || !direction) return;
+    const lastIndex = vocabDeck.length - 1;
+
+    if (direction > 0) {
+      if (vocabState.index === lastIndex) {
+        if (vocabEls.next) {
+          vocabEls.next.disabled = true;
+          vocabEls.next.dataset.locked = 'true';
+        }
+        launchConfetti();
+        updateVocabControls();
+        setTimeout(() => {
+          if (vocabEls.next) {
+            vocabEls.next.disabled = false;
+            delete vocabEls.next.dataset.locked;
+          }
+          vocabState.index = 0;
+          vocabState.revealed = false;
+          renderVocabCard();
+        }, 1200);
+        return;
+      }
+      vocabState.index += 1;
+    } else if (direction < 0) {
+      if (vocabState.index === 0) {
+        return;
+      }
+      vocabState.index -= 1;
+      if (vocabEls.next) {
+        vocabEls.next.disabled = false;
+        delete vocabEls.next.dataset.locked;
+      }
+    }
+
+    vocabState.revealed = false;
+    renderVocabCard();
+  }
+
+  function toggleVocabCard() {
+    vocabState.revealed = !vocabState.revealed;
+    renderVocabCard();
+  }
+
+  function initVocabDemo() {
+    const card = document.querySelector('.vocab-card');
+    if (!card) return;
+
+    vocabEls.card = card;
+    vocabEls.word = card.querySelector('.vocab-word');
+    vocabEls.translation = card.querySelector('.vocab-translation');
+    vocabEls.hint = document.querySelector('.vocab-hint');
+    vocabEls.prev = document.querySelector('.vocab-nav--prev');
+    vocabEls.next = document.querySelector('.vocab-nav--next');
+    vocabEls.current = document.querySelector('.vocab-progress__current');
+    vocabEls.total = document.querySelector('.vocab-progress__total');
+    vocabEls.confetti = document.querySelector('.confetti-layer');
+
+    if (vocabEls.total) vocabEls.total.textContent = String(vocabDeck.length);
+
+    card.addEventListener('click', toggleVocabCard);
+
+    vocabEls.prev?.addEventListener('click', () => cycleVocab(-1));
+    vocabEls.next?.addEventListener('click', () => cycleVocab(1));
+
+    const handleKey = (event) => {
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        cycleVocab(1);
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        cycleVocab(-1);
+      } else if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleVocabCard();
+      }
+    };
+
+    card.addEventListener('keydown', handleKey);
+
+    renderVocabCard();
+  }
 
   function updateLangToggleUI(lang) {
     const meta = languageMeta[lang] || languageMeta.en;
@@ -114,6 +320,7 @@ const translations = {
   }
 
   function setLanguage(lang) {
+    activeLang = lang;
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       const value = translations[lang]?.[key] ?? translations.en?.[key];
@@ -126,12 +333,14 @@ const translations = {
     updateLangToggleUI(lang);
     // update html lang attribute
     document.documentElement.setAttribute('lang', lang);
+    renderVocabCard();
   }
   
   // On load: initialize language and dropdown behavior
   document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("lang") || "en";
     setLanguage(savedLang);
+    initVocabDemo();
 
     const dropdown = document.getElementById('langDropdown');
     const toggle = document.getElementById('langToggle');

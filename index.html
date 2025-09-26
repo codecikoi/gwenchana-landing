@@ -175,39 +175,107 @@
 
   <!-- Vocabulary cards demo -->
   <section id="vocab-demo" class="section vocab-demo screen-section">
-    <div class="container vocab-demo__inner">
-      <div class="vocab-demo__copy">
-        <span class="vocab-label" data-i18n="vocab_pill">Interactive preview</span>
-        <h2 class="vocab-heading" data-i18n="vocab_title">Build your vocabulary</h2>
-        <p class="vocab-subheading" data-i18n="vocab_body">Tap a Korean word to reveal the translation in your language. Track your progress and enjoy learning with interactive flashcards.</p>
+    <div class="container">
+      <div class="vocab-demo__inner">
+        <div class="vocab-demo__copy">
+          <span class="vocab-label" data-i18n="vocab_pill">Interactive preview</span>
+          <h2 class="vocab-heading" data-i18n="vocab_title">Build your vocabulary</h2>
+          <p class="vocab-subheading" data-i18n="vocab_body">Tap a Korean word to reveal the translation in your language. Track your progress and enjoy learning with interactive flashcards.</p>
+        </div>
+
+        <div class="vocab-card-column" aria-live="polite">
+          <div class="vocab-card-wrapper">
+            <button class="vocab-card" type="button" aria-pressed="false">
+              <span class="vocab-card__face vocab-card__face--front">
+                <span class="vocab-word">안녕하세요</span>
+              </span>
+              <span class="vocab-card__face vocab-card__face--back">
+                <span class="vocab-translation">Hello</span>
+              </span>
+            </button>
+          </div>
+          <p class="vocab-hint" data-i18n="vocab_hint_show">Tap to reveal translation</p>
+          <div class="vocab-controls">
+            <button class="vocab-nav vocab-nav--prev" type="button" disabled>
+              <span aria-hidden="true">←</span>
+              <span class="sr-only" data-i18n="vocab_prev">Previous word</span>
+            </button>
+            <div class="vocab-progress" aria-live="polite">
+              <span class="vocab-progress__counter"><span class="vocab-progress__current">1</span><span class="vocab-progress__divider">/</span><span class="vocab-progress__total">7</span></span>
+            </div>
+            <button class="vocab-nav vocab-nav--next" type="button">
+              <span aria-hidden="true">→</span>
+              <span class="sr-only" data-i18n="vocab_next">Next word</span>
+            </button>
+          </div>
+          <div class="confetti-layer" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vocab-marquee" aria-hidden="true">
+      <div class="vocab-marquee__row" style="--duration: 27s; --delay: -9s;">
+        <div class="vocab-marquee__track">
+          <span class="vocab-chip">안녕하세요</span>
+          <span class="vocab-chip">사랑</span>
+          <span class="vocab-chip">학교</span>
+          <span class="vocab-chip">음식</span>
+          <span class="vocab-chip">가족</span>
+          <span class="vocab-chip">친구</span>
+          <span class="vocab-chip">여행</span>
+          <span class="vocab-chip">문화</span>
+          <span class="vocab-chip">희망</span>
+          <span class="vocab-chip">행복</span>
+          <span class="vocab-chip">자유</span>
+          <span class="vocab-chip">꿈</span>
+          <span class="vocab-chip">성장</span>
+        </div>
+        <div class="vocab-marquee__track" aria-hidden="true">
+          <span class="vocab-chip">안녕하세요</span>
+          <span class="vocab-chip">사랑</span>
+          <span class="vocab-chip">학교</span>
+          <span class="vocab-chip">음식</span>
+          <span class="vocab-chip">가족</span>
+          <span class="vocab-chip">친구</span>
+          <span class="vocab-chip">여행</span>
+          <span class="vocab-chip">문화</span>
+          <span class="vocab-chip">희망</span>
+          <span class="vocab-chip">행복</span>
+          <span class="vocab-chip">자유</span>
+          <span class="vocab-chip">꿈</span>
+          <span class="vocab-chip">성장</span>
+        </div>
       </div>
 
-      <div class="vocab-card-column" aria-live="polite">
-        <div class="vocab-card-wrapper">
-          <button class="vocab-card" type="button" aria-pressed="false">
-            <span class="vocab-card__face vocab-card__face--front">
-              <span class="vocab-word">안녕하세요</span>
-            </span>
-            <span class="vocab-card__face vocab-card__face--back">
-              <span class="vocab-translation">Hello</span>
-            </span>
-          </button>
+      <div class="vocab-marquee__row vocab-marquee__row--reverse" style="--duration: 22s; --delay: -13s;">
+        <div class="vocab-marquee__track">
+          <span class="vocab-chip">감사합니다</span>
+          <span class="vocab-chip">책</span>
+          <span class="vocab-chip">대화</span>
+          <span class="vocab-chip">공부</span>
+          <span class="vocab-chip">학습</span>
+          <span class="vocab-chip">목표</span>
+          <span class="vocab-chip">성공</span>
+          <span class="vocab-chip">도전</span>
+          <span class="vocab-chip">미소</span>
+          <span class="vocab-chip">에너지</span>
+          <span class="vocab-chip">열정</span>
+          <span class="vocab-chip">배움</span>
         </div>
-        <p class="vocab-hint" data-i18n="vocab_hint_show">Tap to reveal translation</p>
-        <div class="vocab-controls">
-          <button class="vocab-nav vocab-nav--prev" type="button" disabled>
-            <span aria-hidden="true">←</span>
-            <span class="sr-only" data-i18n="vocab_prev">Previous word</span>
-          </button>
-          <div class="vocab-progress" aria-live="polite">
-            <span class="vocab-progress__counter"><span class="vocab-progress__current">1</span><span class="vocab-progress__divider">/</span><span class="vocab-progress__total">7</span></span>
-          </div>
-          <button class="vocab-nav vocab-nav--next" type="button">
-            <span aria-hidden="true">→</span>
-            <span class="sr-only" data-i18n="vocab_next">Next word</span>
-          </button>
+        <div class="vocab-marquee__track" aria-hidden="true">
+          <span class="vocab-chip">감사합니다</span>
+          <span class="vocab-chip">책</span>
+          <span class="vocab-chip">대화</span>
+          <span class="vocab-chip">공부</span>
+          <span class="vocab-chip">학습</span>
+          <span class="vocab-chip">목표</span>
+          <span class="vocab-chip">성공</span>
+          <span class="vocab-chip">도전</span>
+          <span class="vocab-chip">미소</span>
+          <span class="vocab-chip">에너지</span>
+          <span class="vocab-chip">열정</span>
+          <span class="vocab-chip">배움</span>
         </div>
-        <div class="confetti-layer" aria-hidden="true"></div>
       </div>
     </div>
   </section>
