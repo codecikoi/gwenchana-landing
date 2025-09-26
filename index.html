@@ -62,6 +62,7 @@
       <div class="hero-copy">
         <h1 class="hero-title" data-i18n="hero_heading">Gwenchana</h1>
         <p class="hero-subtitle" data-i18n="hero_tagline">Not just another Korean learning app</p>
+        <p class="hero-support" data-i18n="hero_support">AI tutor makes understanding easier and keeps you motivated to practice every day</p>
         <div class="k-rotate" aria-hidden="true">
           <span class="badge green fade" style="animation-delay:0s">안녕하세요</span>
           <span class="badge pink fade" style="animation-delay:.6s">괜찮아</span>
@@ -70,7 +71,6 @@
           <span class="badge green fade" style="animation-delay:2.4s">어휘</span>
           <span class="badge pink fade" style="animation-delay:3s">문법</span>
         </div>
-        <p class="hero-support" data-i18n="hero_support">AI tutor makes Korean grammar easier to understand</p>
         <div class="hero-btns hero-btns--center">
           <a href="#" class="btn store-btn appstore">
             <span class="store-icon" aria-hidden="true">
@@ -126,30 +126,88 @@
   <section id="features" class="section features screen-section">
     <div class="container">
       <h2 data-i18n="features_title">Why Gwenchana?</h2>
-      <ul>
-        <li data-i18n="features_item1">📚 Structured KIIP lessons</li>
-        <li data-i18n="features_item2">🤖 AI tutor explains grammar clearly</li>
-        <li data-i18n="features_item3">📝 Practice vocabulary, writing & reading</li>
-      </ul>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🌐</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_multi_title">Multi-language Support</h3>
+            <p data-i18n="features_multi_desc">Supports multiple languages with full localization.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🔐</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_auth_title">Secure Authentication</h3>
+            <p data-i18n="features_auth_desc">Log in with email, Google, or Facebook in seconds.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🧠</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_vocab_title">Vocabulary Workouts</h3>
+            <p data-i18n="features_vocab_desc">Interactive drills and flashcards keep new words fresh.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">📈</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_progress_title">Progress Tracking</h3>
+            <p data-i18n="features_progress_desc">Visualize your gains across every KIIP level.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🤖</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_ai_title">AI Tutor</h3>
+            <p data-i18n="features_ai_desc">Personalized explanations from an always-on AI coach.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">📝</div>
+          <div class="feature-card__body">
+            <h3 data-i18n="features_offline_title">Create Your Own Cards</h3>
+            <p data-i18n="features_offline_desc">Add words, translations, and examples to study your way.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section about screen-section">
-    <div class="container about-inner">
-      <div class="about-copy">
-        <h2 data-i18n="about_title">Built with learners first</h2>
-        <p data-i18n="about_body">Gwenchana is created by KIIP alumni and Korean teachers who collaborate with AI engineers. Together we map every lesson to real cultural scenarios so you can learn language that actually lands in conversation.</p>
+  <!-- Vocabulary cards demo -->
+  <section id="vocab-demo" class="section vocab-demo screen-section">
+    <div class="container vocab-demo__inner">
+      <div class="vocab-demo__copy">
+        <span class="vocab-label" data-i18n="vocab_pill">Interactive preview</span>
+        <h2 class="vocab-heading" data-i18n="vocab_title">Build your vocabulary</h2>
+        <p class="vocab-subheading" data-i18n="vocab_body">Tap a Korean word to reveal the translation in your language. Track your progress and enjoy learning with interactive flashcards.</p>
       </div>
-      <div class="about-points">
-        <div class="about-card">
-          <h3 data-i18n="about_card1_title">Community wisdom</h3>
-          <p data-i18n="about_card1_body">Weekly focus groups with expats and locals shape the curriculum.</p>
+
+      <div class="vocab-card-column" aria-live="polite">
+        <div class="vocab-card-wrapper">
+          <button class="vocab-card" type="button" aria-pressed="false">
+            <span class="vocab-card__face vocab-card__face--front">
+              <span class="vocab-word">안녕하세요</span>
+            </span>
+            <span class="vocab-card__face vocab-card__face--back">
+              <span class="vocab-translation">Hello</span>
+            </span>
+          </button>
         </div>
-        <div class="about-card">
-          <h3 data-i18n="about_card2_title">AI you can trust</h3>
-          <p data-i18n="about_card2_body">Every explanation is reviewed by certified instructors before launch.</p>
+        <p class="vocab-hint" data-i18n="vocab_hint_show">Tap to reveal translation</p>
+        <div class="vocab-controls">
+          <button class="vocab-nav vocab-nav--prev" type="button" disabled>
+            <span aria-hidden="true">←</span>
+            <span class="sr-only" data-i18n="vocab_prev">Previous word</span>
+          </button>
+          <div class="vocab-progress" aria-live="polite">
+            <span class="vocab-progress__counter"><span class="vocab-progress__current">1</span><span class="vocab-progress__divider">/</span><span class="vocab-progress__total">7</span></span>
+          </div>
+          <button class="vocab-nav vocab-nav--next" type="button">
+            <span aria-hidden="true">→</span>
+            <span class="sr-only" data-i18n="vocab_next">Next word</span>
+          </button>
         </div>
+        <div class="confetti-layer" aria-hidden="true"></div>
       </div>
     </div>
   </section>
