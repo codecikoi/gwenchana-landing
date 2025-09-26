@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Korean Text Animations — Full Demo</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      display: grid;
+      gap: 60px;
+      justify-content: center;
+      padding: 40px;
+      background: #f9fafb;
+      color: #111827;
+    }
+    h2 { margin-bottom: 12px; }
+
+    /* 1. Typewriter */
+    .typewriter {
+      font-size: 28px;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #333;
+      width: 0;
+      animation: typing 3s steps(12) infinite, blink .8s step-end infinite;
+    }
+    @keyframes typing {
+      0%   { width: 0; }
+      50%  { width: 12ch; }
+      100% { width: 0; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* 2. Floating words */
+    .float-container {
+      position: relative;
+      height: 120px;
+      overflow: hidden;
+      border: 1px dashed #ccc;
+    }
+    .float-word {
+      position: absolute;
+      font-size: 24px;
+      font-weight: 700;
+      animation: floatUp 6s linear infinite;
+    }
+    .float-word:nth-child(1) { left: 20px; animation-delay: 0s; }
+    .float-word:nth-child(2) { left: 120px; animation-delay: 2s; }
+    .float-word:nth-child(3) { left: 220px; animation-delay: 4s; }
+    @keyframes floatUp {
+      0%   { transform: translateY(100px); opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translateY(-50px); opacity: 0; }
+    }
+
+    /* 3. Gradient shimmer */
+    .gradient-text {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff3d77, #ffb347, #00dbde);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    /* 4. Rotating words vertical */
+    .rotate-text {
+      display: inline-block;
+      height: 36px;
+      overflow: hidden;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .rotate-text span {
+      display: block;
+      animation: rotateWord 8s linear infinite;
+    }
+    @keyframes rotateWord {
+      0%, 20%   { transform: translateY(0%); }
+      25%, 45%  { transform: translateY(-100%); }
+      50%, 70%  { transform: translateY(-200%); }
+      75%, 95%  { transform: translateY(-300%); }
+      100%      { transform: translateY(0%); }
+    }
+
+    /* 5. Rotating cube (3D) */
+    .cube-container {
+      position: relative;
+      width: 200px;
+      height: 40px;
+      perspective: 1000px;
+      font-size: 26px;
+      font-weight: 700;
+      overflow: hidden;
+    }
+    .cube-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      transform-origin: center;
+      animation: cubeRotate 8s infinite linear;
+    }
+    .cube-text:nth-child(1) { animation-delay: 0s; }
+    .cube-text:nth-child(2) { animation-delay: 2s; }
+    .cube-text:nth-child(3) { animation-delay: 4s; }
+    .cube-text:nth-child(4) { animation-delay: 6s; }
+    @keyframes cubeRotate {
+      0%   { opacity: 0; transform: rotateY(-90deg) translateZ(50px); }
+      10%  { opacity: 1; transform: rotateY(0deg) translateZ(50px); }
+      25%  { opacity: 1; transform: rotateY(0deg) translateZ(50px); }
+      35%  { opacity: 0; transform: rotateY(90deg) translateZ(50px); }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>1. Typewriter</h2>
+    <div class="typewriter">안녕하세요 한국어 공부</div>
+  </div>
+
+  <div>
+    <h2>2. Floating Words</h2>
+    <div class="float-container">
+      <div class="float-word">안녕하세요</div>
+      <div class="float-word">사랑해요</div>
+      <div class="float-word">괜찮아</div>
+    </div>
+  </div>
+
+  <div>
+    <h2>3. Gradient Shimmer</h2>
+    <div class="gradient-text">한국어 공부</div>
+  </div>
+
+  <div>
+    <h2>4. Rotating Words (Vertical)</h2>
+    <div class="rotate-text">
+      <span>안녕하세요</span>
+      <span>괜찮아</span>
+      <span>사랑해요</span>
+      <span>한국어 공부</span>
+    </div>
+  </div>
+
+  <div>
+    <h2>5. Rotating Cube (3D Horizontal)</h2>
+    <div class="cube-container">
+      <div class="cube-text">안녕하세요</div>
+      <div class="cube-text">괜찮아</div>
+      <div class="cube-text">사랑해요</div>
+      <div class="cube-text">한국어 공부</div>
+    </div>
+  </div>
+
+</body>
+</html>

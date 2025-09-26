@@ -17,14 +17,18 @@
         <div class="nav-wrapper">
           <nav class="nav" id="primaryNav">
             <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">
-              <span class="menu-icon" aria-hidden="true">☰</span>
+              <span class="menu-icon" aria-hidden="true">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+              </span>
               <span data-i18n="nav_menu">Menu</span>
             </button>
             <div class="nav-links" id="navLinks">
               <a href="#about" data-i18n="nav_about">About</a>
               <a href="#features" data-i18n="nav_features">Features</a>
               <a href="#faq" data-i18n="nav_faq">FAQ</a>
-              <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
+              <a href="#download" class="nav-link-download" data-i18n="nav_download">Download</a>
             </div>
           </nav>
 
@@ -57,10 +61,15 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <h1 class="hero-title" data-i18n="hero_heading">Gwenchana</h1>
-        <p class="hero-subtitle hero-subtitle--center">
-          <span data-i18n="hero_tagline">Not just another Korean learning app</span>
-          <span class="hero-word" aria-hidden="true">괜찮아</span>
-        </p>
+        <p class="hero-subtitle" data-i18n="hero_tagline">Not just another Korean learning app</p>
+        <div class="k-rotate" aria-hidden="true">
+          <span class="badge green fade" style="animation-delay:0s">안녕하세요</span>
+          <span class="badge pink fade" style="animation-delay:.6s">괜찮아</span>
+          <span class="badge purple fade" style="animation-delay:1.2s">한국어 공부</span>
+          <span class="badge amber fade" style="animation-delay:1.8s">사랑해요</span>
+          <span class="badge green fade" style="animation-delay:2.4s">어휘</span>
+          <span class="badge pink fade" style="animation-delay:3s">문법</span>
+        </div>
         <p class="hero-support" data-i18n="hero_support">AI tutor makes Korean grammar easier to understand</p>
         <div class="hero-btns hero-btns--center">
           <a href="#" class="btn store-btn appstore">
@@ -88,6 +97,26 @@
               <span data-i18n="btn_googleplay">Google Play</span>
             </span>
           </a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone">
+          <div class="card green">
+            <span>Vocabulary</span>
+            <span class="icon">📘</span>
+          </div>
+          <div class="card pink">
+            <span>Reading</span>
+            <span class="icon">📖</span>
+          </div>
+          <div class="card purple">
+            <span>Writing</span>
+            <span class="icon">💬</span>
+          </div>
+          <div class="card amber">
+            <span>Grammar</span>
+            <span class="icon">✍️</span>
+          </div>
         </div>
       </div>
     </div>

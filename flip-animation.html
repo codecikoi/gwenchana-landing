@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vocabulary Cards</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h2 { margin-bottom: 20px; }
+
+    /* Карточка */
+    .card-container {
+      perspective: 1000px;
+      width: 300px;
+      height: 180px;
+      margin-bottom: 20px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      background: linear-gradient(135deg,#6671e5,#6f58e8);
+      color: #fff;
+      font-size: 26px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      box-shadow: 0 15px 35px rgba(0,0,0,.2);
+    }
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .back {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg,#ff7eb3,#ff3d77);
+    }
+
+    /* Навигация */
+    .controls {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+    .controls button {
+      padding: 10px 16px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #4f46e5;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .controls button:hover {
+      background: #4338ca;
+    }
+
+    /* Прогресс */
+    .progress {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Салют (canvas) */
+    #confetti {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Vocabulary Practice</h2>
+
+  <div class="card-container">
+    <div class="card" id="vocabCard">
+      <div class="front">안녕하세요</div>
+      <div class="back">Hello</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prevBtn">⬅️ Prev</button>
+    <button id="nextBtn">Next ➡️</button>
+  </div>
+
+  <div class="progress" id="progress">1 / 7</div>
+
+  <canvas id="confetti"></canvas>
+
+  <script>
+    const words = [
+      {ko: "안녕하세요", en: "Hello"},
+      {ko: "사랑해요", en: "I love you"},
+      {ko: "학교", en: "School"},
+      {ko: "친구", en: "Friend"},
+      {ko: "음식", en: "Food"},
+      {ko: "책", en: "Book"},
+      {ko: "괜찮아", en: "It's okay"},
+    ];
+
+    let index = 0;
+    const card = document.getElementById("vocabCard");
+    const front = card.querySelector(".front");
+    const back = card.querySelector(".back");
+    const progress = document.getElementById("progress");
+    const confettiCanvas = document.getElementById("confetti");
+    const ctx = confettiCanvas.getContext("2d");
+
+    let flipped = false;
+
+    function updateCard() {
+      front.textContent = words[index].ko;
+      back.textContent = words[index].en;
+      progress.textContent = `${index+1} / ${words.length}`;
+    }
+
+    card.addEventListener("click", () => {
+      flipped = !flipped;
+      card.classList.toggle("flipped", flipped);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (index > 0) {
+        index--;
+        flipped = false;
+        card.classList.remove("flipped");
+        updateCard();
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (index < words.length - 1) {
+        index++;
+        flipped = false;
+        card.classList.remove("flipped");
+        updateCard();
+        if (index === words.length - 1) {
+          setTimeout(startConfetti, 500);
+        }
+      }
+    });
+
+    updateCard();
+
+    // 🎉 Конфетти-анимация
+    let particles = [];
+    function startConfetti() {
+      confettiCanvas.style.display = "block";
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+      particles = Array.from({length: 150}, () => ({
+        x: Math.random()*confettiCanvas.width,
+        y: Math.random()*confettiCanvas.height - confettiCanvas.height,
+        c: `hsl(${Math.random()*360},100%,50%)`,
+        s: Math.random()*6+4,
+        v: Math.random()*3+2
+      }));
+      requestAnimationFrame(updateConfetti);
+      setTimeout(() => confettiCanvas.style.display = "none", 4000);
+    }
+
+    function updateConfetti() {
+      ctx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height);
+      particles.forEach(p => {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(p.x, p.y, p.s, p.s);
+        p.y += p.v;
+        if (p.y > confettiCanvas.height) p.y = -10;
+      });
+      if (confettiCanvas.style.display === "block") {
+        requestAnimationFrame(updateConfetti);
+      }
+    }
+
+    window.addEventListener("resize", () => {
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+    });
+  </script>
+
+</body>
+</html>

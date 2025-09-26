@@ -222,11 +222,13 @@ const translations = {
     if (primaryNav && menuToggle && navLinks) {
       const openNavMenu = () => {
         navLinks.classList.add('is-open');
+        menuToggle.classList.add('is-open');
         menuToggle.setAttribute('aria-expanded', 'true');
       };
 
       const closeNavMenu = () => {
         navLinks.classList.remove('is-open');
+        menuToggle.classList.remove('is-open');
         menuToggle.setAttribute('aria-expanded', 'false');
       };
 

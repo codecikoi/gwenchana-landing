@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App Mockup Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f9fafb;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Телефон */
+    .phone {
+      width: 360px; /* чуть шире */
+      height: 740px;
+      border-radius: 40px;
+      background: #f5b39f;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      padding: 100px 24px 40px; /* сверху больше отступа = ниже карточки */
+      position: relative;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    /* AppBar (имитация динамика сверху) */
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 22px;
+      background: #222;
+      border-radius: 12px;
+    }
+
+    /* Карточки */
+    .card {
+      padding: 24px;
+      border-radius: 18px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 22px;
+      margin: 18px 0;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideIn 1s forwards;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card span.icon {
+      font-size: 26px;
+    }
+
+    .card.green {
+      background: linear-gradient(135deg,#2ecc71,#1abc9c);
+      animation-delay: .3s;
+    }
+    .card.pink {
+      background: linear-gradient(135deg,#ff7eb3,#ff3d77);
+      animation-delay: .6s;
+    }
+    .card.purple {
+      background: linear-gradient(135deg,#6671e5,#6f58e8);
+      animation-delay: .9s;
+    }
+    .card.orange {
+      background: linear-gradient(135deg,#ffb300,#d97706);
+      animation-delay: 1.2s;
+    }
+
+    /* Анимации */
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      25% { transform: translateY(-10px) rotate(-1deg); }
+      50% { transform: translateY(0) rotate(0); }
+      75% { transform: translateY(-10px) rotate(1deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="card green">
+      Vocabulary <span class="icon">📘</span>
+    </div>
+    <div class="card pink">
+      Reading <span class="icon">📖</span>
+    </div>
+    <div class="card purple">
+      Writing <span class="icon">💬</span>
+    </div>
+    <div class="card orange">
+      Grammar <span class="icon">✍️</span>
+    </div>
+  </div>
+</body>
+</html>
