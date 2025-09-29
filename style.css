@@ -611,6 +611,8 @@ img { max-width: 100%; display: block; }
   color: #f8fafc;
   box-shadow: 0 28px 60px -30px rgba(34, 211, 238, 0.45);
   border: 1px solid rgba(248, 250, 252, 0.1);
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .store-btn:hover {
@@ -1905,12 +1907,29 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 560px) {
   .footer-columns {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    text-align: left;
+    gap: 20px;
   }
 
-  .footer-column ul { align-items: center; }
-  .footer-column--contacts ul li { justify-content: center; }
+  .footer-column h3 {
+    font-size: 17px;
+  }
+
+  .footer-column ul {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .footer-column--contacts ul li { justify-content: flex-start; }
+
+  .footer {
+    padding: 56px 0 24px;
+  }
 }
 
 .nav a:active::after,
