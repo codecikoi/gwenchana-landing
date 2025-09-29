@@ -199,12 +199,8 @@ const translations = {
   let activeLang = 'en';
 
   const vocabDeck = [
+    { word: '괜찮아', translations: { en: 'It’s okay', ru: 'Всё нормально', ko: 'It’s okay'} },
     { word: '안녕하세요', translations: { en: 'Hello', ru: 'Привет', ko: 'Hello' } },
-    { word: '사랑', translations: { en: 'Love', ru: 'Любовь', ko: 'Love' } },
-    { word: '학교', translations: { en: 'School', ru: 'Школа', ko: 'School' } },
-    { word: '음식', translations: { en: 'Food', ru: 'Еда', ko: 'Food' } },
-    { word: '가족', translations: { en: 'Family', ru: 'Семья', ko: 'Family' } },
-    { word: '책', translations: { en: 'Book', ru: 'Книга', ko: 'Book' } },
     { word: '감사합니다', translations: { en: 'Thank you', ru: 'Спасибо', ko: 'Thank you' } }
   ];
 
