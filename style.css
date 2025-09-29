@@ -580,9 +580,9 @@ img { max-width: 100%; display: block; }
   font-size: clamp(18px, 3vw, 22px);
   color: var(--text-primary);
   max-width: 620px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.65;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Baloo Bhai 2', cursive;
   text-align: center;
   margin: 0 auto;
 }
@@ -648,7 +648,7 @@ img { max-width: 100%; display: block; }
 
 .store-content span:last-child {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .about {
