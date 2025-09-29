@@ -585,6 +585,7 @@ img { max-width: 100%; display: block; }
   font-family: 'Rubik', sans-serif;
   text-align: center;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero-btns {
