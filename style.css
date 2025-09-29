@@ -773,7 +773,7 @@ img { max-width: 100%; display: block; }
 
   .store-btn {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .phone {
