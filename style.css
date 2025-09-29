@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Fredoka+One&family=Rubik:wght@300;400;500;600;700&family=SUSE+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Fredoka+One&family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&family=SUSE+Mono:wght@400;500;600&display=swap');
 
 :root {
   --bg-midnight: #0f172a;
@@ -83,7 +83,7 @@
 
 /* Reset & base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Rubik', sans-serif; color: #0F172A; background: #fff; line-height: 1.6; }
+body { font-family: 'Montserrat', 'Rubik', sans-serif; color: #0F172A; background: #fff; line-height: 1.6; }
 body { scroll-padding-top: 120px; }
 
 h1, h2, h3, h4, h5, h6,
@@ -1808,6 +1808,8 @@ img { max-width: 100%; display: block; }
   .download-actions__stores .store-btn {
     width: 100%;
     min-width: unset;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .download-floating {
