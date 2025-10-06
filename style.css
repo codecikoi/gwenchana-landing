@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Chiron+Go+Round+TC:wght@400;500;700&family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg-midnight: #0f172a;
@@ -10,6 +10,67 @@
   --accent-rose: #f472b6;
   --text-primary: #0f172a;
   --text-secondary: #475569;
+  
+  /* Typography Variables for Multilingual Support */
+  --font-body-en: 'Inter', sans-serif;
+  --font-heading-en: 'Sora', sans-serif;
+  
+  --font-body-ru: 'Inter', sans-serif;
+  --font-heading-ru: 'Manrope', sans-serif;
+  
+  --font-body-ko: 'Noto Sans KR', sans-serif;
+  --font-heading-ko: 'Noto Sans KR', sans-serif;
+  
+  /* Default fonts (English) */
+  --font-body: var(--font-body-en);
+  --font-heading: var(--font-heading-en);
+}
+
+/* Language-specific font switching */
+:root:lang(ru) {
+  --font-body: var(--font-body-ru);
+  --font-heading: var(--font-heading-ru);
+}
+
+:root:lang(ko) {
+  --font-body: var(--font-body-ko);
+  --font-heading: var(--font-heading-ko);
+}
+
+/* Typography-specific line-height and letter-spacing adjustments */
+:root:lang(ru) {
+  --line-height-tight: 1.3;
+  --letter-spacing-tight: -0.01em;
+}
+
+:root:lang(ko) {
+  --line-height-tight: 1.4;
+  --letter-spacing-tight: -0.005em;
+}
+
+/* Korean-specific typography improvements */
+:root:lang(ko) .hero-title {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+:root:lang(ko) .vocab-word {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+:root:lang(ko) .badge {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Russian-specific typography improvements */
+:root:lang(ru) .hero-title {
+  letter-spacing: -0.03em;
+}
+
+:root:lang(ru) .badge {
+  font-weight: 600;
 }
 
 .lang-switch {
@@ -83,7 +144,7 @@
 
 /* Reset & base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Baloo 2',   sans-serif; color: #0F172A; background: #fff; line-height: 1.6; }
+body { font-family: var(--font-body); color: #0F172A; background: #fff; line-height: 1.6; }
 body { scroll-padding-top: 120px; }
 
 h1, h2, h3, h4, h5, h6,
@@ -94,7 +155,9 @@ h1, h2, h3, h4, h5, h6,
 .download-heading__title,
 .feature-card__body h3,
 .download-subtitle {
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-heading);
+  line-height: var(--line-height-tight, 1.2);
+  letter-spacing: var(--letter-spacing-tight, -0.02em);
 }
 img { max-width: 100%; display: block; }
 .sr-only {
@@ -119,21 +182,21 @@ img { max-width: 100%; display: block; }
 /* Header */
 .header {
   position: fixed;
-  top: clamp(8px, 2vw, 16px);
+  top: clamp(0.5rem, 2vh, 1rem);
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  padding: 0 clamp(8px, 2vw, 16px);
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
   z-index: 220;
   pointer-events: none;
   transition: transform 0.3s ease;
 }
 
 .header-surface {
-  width: min(100%, 960px);
+  width: min(100%, 60rem);
   display: flex;
-  border-radius: clamp(12px, 3vw, 18px);
+  border-radius: clamp(0.75rem, 2vw, 1.125rem);
   border: 1px solid rgba(148, 163, 184, 0.22);
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.92), rgba(243, 244, 255, 0.9));
   box-shadow: 0 16px 38px -24px rgba(15, 23, 42, 0.55);
@@ -149,8 +212,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(12px, 3vw, 24px);
-  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 2vw, 1.25rem);
   flex-wrap: wrap;
 }
 
@@ -166,8 +229,8 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(40px, 8vw, 48px);
-  height: clamp(40px, 8vw, 48px);
+  width: clamp(2.5rem, 5vw + 1rem, 3rem);
+  height: clamp(2.5rem, 5vw + 1rem, 3rem);
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(14, 165, 233, 0.15));
   overflow: hidden;
@@ -303,7 +366,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
-    gap: clamp(8px, 2vw, 16px);
+    gap: clamp(0.5rem, 1.5vw, 1rem);
   }
 
   .nav-wrapper {
@@ -368,7 +431,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 520px) {
   .header-inner {
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
   }
 
   .nav {
@@ -407,11 +470,15 @@ img { max-width: 100%; display: block; }
 .hero::before {
   inset: auto -20% 35% -15%;
   background: radial-gradient(68% 68% at 50% 50%, rgba(99, 102, 241, 0.55), transparent 78%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
 .hero::after {
   inset: -25% -18% auto 45%;
   background: radial-gradient(65% 65% at 50% 50%, rgba(34, 211, 238, 0.6), transparent 75%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
 .hero-inner {
@@ -440,7 +507,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(48px, 11vw, 88px);
   font-weight: 800;
   letter-spacing: -0.045em;
-  font-family: 'Baloo Bhai 2', sans-serif;
+  font-family: var(--font-heading);
   line-height: 1.05;
   background: linear-gradient(120deg, #0f172a 0%, #312e81 55%, #0ea5e9 100%);
   color: transparent;
@@ -454,7 +521,7 @@ img { max-width: 100%; display: block; }
   color: #312e81;
   font-weight: 400;
   letter-spacing: 0.02em;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: var(--font-body);
   display: inline-block;
   margin-top: 6px;
 }
@@ -471,7 +538,7 @@ img { max-width: 100%; display: block; }
   padding: 8px 14px;
   border-radius: 999px;
   font-weight: 700;
-  font-family: 'Baloo 2',  sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   letter-spacing: 0.01em;
   box-shadow: 0 18px 38px -32px rgba(15, 23, 42, 0.35);
@@ -589,7 +656,7 @@ img { max-width: 100%; display: block; }
   max-width: 620px;
   font-weight: 300;
   line-height: 1.65;
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-body);
   text-align: center;
   margin: 0 auto;
   padding: 0 20px;
@@ -812,15 +879,15 @@ img { max-width: 100%; display: block; }
 }
 
 .screen-section {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 8.75rem);
   display: flex;
   align-items: center;
-  padding-top: clamp(80px, 15vw, 120px);
-  padding-bottom: clamp(80px, 15vw, 120px);
+  padding-top: clamp(5rem, 10vh + 2rem, 7.5rem);
+  padding-bottom: clamp(5rem, 10vh + 2rem, 7.5rem);
 }
 
 .screen-section > .container {
-  width: min(100% - clamp(16px, 4vw, 32px), 1120px);
+  width: min(100% - 2rem, 70rem);
 }
 .features {
   position: relative;
@@ -1036,7 +1103,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   left: clamp(28px, 10vw, 160px);
   bottom: clamp(12%, 22vw, 32%);
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(46px, 13vw, 108px);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1128,7 +1195,7 @@ img { max-width: 100%; display: block; }
 }
 
 .vocab-heading {
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(30px, 4.8vw, 42px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -1136,7 +1203,7 @@ img { max-width: 100%; display: block; }
 }
 
 .vocab-subheading {
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   color: #374151;
   line-height: 1.75;
@@ -1542,7 +1609,7 @@ img { max-width: 100%; display: block; }
 }
 
 .faq-answer p {
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-body);
   color: var(--text-secondary);
   line-height: 1.7;
   font-weight: 600;
@@ -1690,7 +1757,7 @@ img { max-width: 100%; display: block; }
 .download-heading__title {
   position: relative;
   font-size: clamp(36px, 6.5vw, 58px);
-  font-family: 'Baloo 2',   sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.018em;
   line-height: 1.08;
@@ -1951,7 +2018,7 @@ img { max-width: 100%; display: block; }
 }
 
 .footer .container {
-  width: min(100% - 32px, 960px);
+  width: min(100% - 2rem, 60rem);
 }
 
 .footer-columns {
@@ -2054,3 +2121,158 @@ img { max-width: 100%; display: block; }
 .nav a:active::after,
 .nav a:focus-visible::after { transform: scaleX(1); }
 .nav a:focus-visible { outline: none; color: #4F46E5; }
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+
+/* Базовые состояния для анимируемых элементов */
+.scroll-fade-up,
+.scroll-fade-left,
+.scroll-fade-right,
+.scroll-scale {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade-up {
+  transform: translateY(40px);
+}
+
+.scroll-fade-left {
+  transform: translateX(-40px);
+}
+
+.scroll-fade-right {
+  transform: translateX(40px);
+}
+
+.scroll-scale {
+  transform: scale(0.9);
+}
+
+/* Активное состояние - элемент появляется */
+.scroll-fade-up.animate-in,
+.scroll-fade-left.animate-in,
+.scroll-fade-right.animate-in,
+.scroll-scale.animate-in {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Параллакс элементы */
+.scroll-parallax {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Stagger анимации для последовательного появления */
+.stagger-group .scroll-fade-up:nth-child(1) { transition-delay: 0ms; }
+.stagger-group .scroll-fade-up:nth-child(2) { transition-delay: 150ms; }
+.stagger-group .scroll-fade-up:nth-child(3) { transition-delay: 300ms; }
+.stagger-group .scroll-fade-up:nth-child(4) { transition-delay: 450ms; }
+.stagger-group .scroll-fade-up:nth-child(5) { transition-delay: 600ms; }
+.stagger-group .scroll-fade-up:nth-child(6) { transition-delay: 750ms; }
+
+.stagger-group .scroll-fade-left:nth-child(1) { transition-delay: 0ms; }
+.stagger-group .scroll-fade-left:nth-child(2) { transition-delay: 150ms; }
+.stagger-group .scroll-fade-left:nth-child(3) { transition-delay: 300ms; }
+.stagger-group .scroll-fade-left:nth-child(4) { transition-delay: 450ms; }
+
+.stagger-group .scroll-fade-right:nth-child(1) { transition-delay: 0ms; }
+.stagger-group .scroll-fade-right:nth-child(2) { transition-delay: 150ms; }
+.stagger-group .scroll-fade-right:nth-child(3) { transition-delay: 300ms; }
+.stagger-group .scroll-fade-right:nth-child(4) { transition-delay: 450ms; }
+
+/* Специальные анимации для конкретных секций */
+
+/* Hero section - subtle parallax для декоративных элементов */
+.hero .scroll-parallax {
+  opacity: 1;
+}
+
+/* Features section - более выраженные анимации */
+.features .scroll-fade-up {
+  transform: translateY(60px);
+}
+
+.features .scroll-fade-up.animate-in {
+  transform: translateY(0);
+}
+
+/* Vocabulary demo - боковые анимации */
+.vocab-demo .scroll-fade-left {
+  transform: translateX(-60px);
+}
+
+.vocab-demo .scroll-fade-right {
+  transform: translateX(60px);
+}
+
+/* FAQ - последовательное появление */
+.faq-item.scroll-fade-up {
+  transform: translateY(30px);
+  transition-delay: var(--faq-delay, 0ms);
+}
+
+.faq-item.scroll-fade-up.animate-in {
+  transform: translateY(0);
+}
+
+/* Download section - scale эффект для заголовка */
+.download-heading__title.scroll-scale {
+  transform: scale(0.95);
+}
+
+.download-heading__title.scroll-scale.animate-in {
+  transform: scale(1);
+}
+
+/* Медиа-запросы для отключения анимаций на мобильных устройствах */
+@media (max-width: 768px) {
+  .scroll-fade-up,
+  .scroll-fade-left,
+  .scroll-fade-right,
+  .scroll-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .scroll-parallax {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* Дополнительные эффекты для улучшения восприятия */
+
+/* Hover эффекты для анимированных элементов */
+.scroll-fade-up:hover:not(.animate-in),
+.scroll-fade-left:hover:not(.animate-in),
+.scroll-fade-right:hover:not(.animate-in) {
+  opacity: 0.7;
+}
+
+/* Плавное появление для контента */
+.scroll-content {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.scroll-content.animate-in {
+  opacity: 1;
+}
+
+/* Анимация для плавающих элементов */
+.floating-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.floating-element.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -60,9 +60,9 @@
   <section id="hero" class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <h1 class="hero-title" data-i18n="hero_heading">Gwenchana</h1>
-        <p class="hero-support hero-support--combined" data-i18n="hero_support">Not just another Korean learning app — AI tutor makes understanding easier and keeps you motivated to practice every day.</p>
-        <div class="k-rotate" aria-hidden="true">
+        <h1 class="hero-title scroll-fade-up" data-i18n="hero_heading">Gwenchana</h1>
+        <p class="hero-support hero-support--combined scroll-fade-up" data-i18n="hero_support">Not just another Korean learning app — AI tutor makes understanding easier and keeps you motivated to practice every day.</p>
+        <div class="k-rotate scroll-fade-up" aria-hidden="true" data-stagger-delay="200">
           <span class="badge green fade" style="animation-delay:0s">안녕하세요</span>
           <span class="badge pink fade" style="animation-delay:.6s">괜찮아</span>
           <span class="badge purple fade" style="animation-delay:1.2s">한국어 공부</span>
@@ -70,7 +70,7 @@
           <span class="badge green fade" style="animation-delay:2.4s">어휘</span>
           <span class="badge pink fade" style="animation-delay:3s">문법</span>
         </div>
-        <div class="hero-btns hero-btns--center">
+        <div class="hero-btns hero-btns--center scroll-fade-up" data-stagger-delay="400">
           <a href="#" class="btn store-btn appstore">
             <span class="store-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" focusable="false">
@@ -98,7 +98,7 @@
           </a>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
+      <div class="hero-visual scroll-fade-right" aria-hidden="true" data-stagger-delay="300">
         <div class="phone">
           <div class="card green">
             <span data-i18n="hero_card_vocab">Vocabulary</span>
@@ -124,44 +124,44 @@
   <!-- Features -->
   <section id="features" class="section features screen-section">
     <div class="container">
-      <h2 data-i18n="features_title">Why Gwenchana?</h2>
-      <div class="features-grid">
-        <article class="feature-card">
+      <h2 class="scroll-fade-up" data-i18n="features_title">Why Gwenchana?</h2>
+      <div class="features-grid stagger-group">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">🌐</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_multi_title">Multi-language Support</h3>
             <p data-i18n="features_multi_desc">Supports multiple languages with full localization.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">🔐</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_auth_title">Secure Authentication</h3>
             <p data-i18n="features_auth_desc">Log in with email, Google, or Facebook in seconds.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">🧠</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_vocab_title">Vocabulary Workouts</h3>
             <p data-i18n="features_vocab_desc">Interactive drills and flashcards keep new words fresh.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">📈</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_progress_title">Progress Tracking</h3>
             <p data-i18n="features_progress_desc">Visualize your gains across every KIIP level.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">🤖</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_ai_title">AI Tutor</h3>
             <p data-i18n="features_ai_desc">Personalized explanations from an always-on AI coach.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card scroll-fade-up">
           <div class="feature-card__icon" aria-hidden="true">📝</div>
           <div class="feature-card__body">
             <h3 data-i18n="features_offline_title">Create Your Own Cards</h3>
@@ -174,7 +174,7 @@
 
   <!-- Vocabulary cards demo -->
   <section id="vocab-demo" class="section vocab-demo screen-section">
-    <div class="vocab-floating" aria-hidden="true">
+    <div class="vocab-floating scroll-parallax" aria-hidden="true" data-parallax-speed="0.3">
       <div class="vocab-floating__cluster">
         <div class="vocab-floating__orbit">
           <span class="vocab-orbit-flag">🇺🇿</span>
@@ -194,13 +194,13 @@
     </div>
     <div class="container">
       <div class="vocab-demo__inner">
-        <div class="vocab-demo__copy">
+        <div class="vocab-demo__copy scroll-fade-left">
           <span class="vocab-label" data-i18n="vocab_pill">Interactive preview</span>
           <h2 class="vocab-heading" data-i18n="vocab_title">Build your vocabulary</h2>
           <p class="vocab-subheading" data-i18n="vocab_body">Tap a Korean word to reveal the translation in your language. Track your progress and enjoy learning with interactive flashcards.</p>
         </div>
 
-        <div class="vocab-card-column" aria-live="polite">
+        <div class="vocab-card-column scroll-fade-right" aria-live="polite">
           <div class="vocab-card-wrapper">
             <button class="vocab-card" type="button" aria-pressed="false">
               <span class="vocab-card__face vocab-card__face--front">
@@ -234,9 +234,9 @@
   <!-- FAQ -->
   <section id="faq" class="section faq screen-section">
     <div class="container">
-      <h2 data-i18n="faq_title">FAQ</h2>
-      <div class="faq-list">
-        <details class="faq-item" open>
+      <h2 class="scroll-fade-up" data-i18n="faq_title">FAQ</h2>
+      <div class="faq-list stagger-group">
+        <details class="faq-item scroll-fade-up" open data-stagger-index="0">
           <summary>
             <span class="faq-question" data-i18n="faq_q1">What is Gwenchana?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -247,7 +247,7 @@
             </div>
           </div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item scroll-fade-up" data-stagger-index="1">
           <summary>
             <span class="faq-question" data-i18n="faq_q2">Does it help with KIIP preparation?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -258,7 +258,7 @@
             </div>
           </div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item scroll-fade-up" data-stagger-index="2">
           <summary>
             <span class="faq-question" data-i18n="faq_q3">Which translation languages are supported?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -269,7 +269,7 @@
             </div>
           </div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item scroll-fade-up" data-stagger-index="3">
           <summary>
             <span class="faq-question" data-i18n="faq_q4">Can I create my own vocabulary cards?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -280,7 +280,7 @@
             </div>
           </div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item scroll-fade-up" data-stagger-index="4">
           <summary>
             <span class="faq-question" data-i18n="faq_q5">Who is Gwenchana for?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -301,9 +301,9 @@
       <div class="download-inner download-inner--minimal">
         <div class="download-heading">
           <span class="download-heading__glow" aria-hidden="true"></span>
-          <h2 class="download-heading__title" data-i18n="download_title">Learn anytime, anywhere</h2>
+          <h2 class="download-heading__title scroll-scale" data-i18n="download_title">Learn anytime, anywhere</h2>
         </div>
-        <div class="download-actions">
+        <div class="download-actions scroll-fade-up" data-stagger-delay="200">
           <div class="download-actions__stores">
             <a href="#" class="btn store-btn appstore">
               <span class="store-icon" aria-hidden="true">
@@ -412,5 +412,6 @@
   </footer>
 
   <script src="lang.js"></script>
+  <script src="scroll-animations.js"></script>
 </body>
 </html>
