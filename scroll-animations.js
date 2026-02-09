@@ -132,7 +132,7 @@ class ScrollAnimations {
     const speed = parseFloat(element.dataset.parallaxSpeed) || 0.5;
     
     const handleScroll = () => {
-      const scrolled = window.pageYOffset;
+      const scrolled = window.scrollY;
       const rect = element.getBoundingClientRect();
       const elementTop = rect.top + scrolled;
       const elementHeight = rect.height;

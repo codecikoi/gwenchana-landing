@@ -14,7 +14,6 @@ const translations = {
       btn_appstore_pretitle: "Download on the",
       btn_appstore: "App Store",
       btn_googleplay_pretitle: "Get it on",
-      // btn_googleplay_pretitle: "Nov 2nd/2025",
       btn_googleplay: "Google Play",
       features_title: "Why Gwenchana?",
       features_multi_title: "Multi-language Support",
@@ -60,6 +59,7 @@ const translations = {
       footer_terms_title: "Terms",
       footer_terms_privacy: "Privacy Policy",
       footer_terms_terms: "Terms of Service",
+      footer_terms_ai: "Terms for using AI",
       footer_copy: "© 2025 Gwenchana.app",
     },
     ru: {
@@ -77,7 +77,6 @@ const translations = {
       btn_appstore_pretitle: "Скачать в",
       btn_appstore: "App Store",
       btn_googleplay_pretitle: "Доступно в",
-      // btn_googleplay_pretitle: "2 ноября в",
       btn_googleplay: "Google Play",
       features_title: "Почему Gwenchana?",
       features_multi_title: "Поддержка нескольких языков",
@@ -99,7 +98,6 @@ const translations = {
       vocab_hint_hide: "Нажмите, чтобы скрыть перевод",
       vocab_prev: "Предыдущее слово",
       vocab_next: "Следующее слово",
-      vocab_progress: "Слово",
       faq_title: "Часто задаваемые вопросы",
       faq_q1: "Что такое Gwenchana?",
       faq_a1: "Gwenchana — приложение для изучения корейского языка, объединяющее словарные карточки, грамматические объяснения, практические упражнения и ИИ-репетитора. ИИ-репетитор объясняет грамматику на удобном вам языке, помогает разбирать примеры и даёт полезные советы. Учебный путь построен вокруг уровней программы KIIP (사회통합), поэтому вы можете продвигаться шаг за шагом, готовиться к экзаменам и чувствовать себя увереннее в повседневной жизни в Корее. Учитесь в любое время и в любом месте — всё необходимое всегда под рукой",
@@ -124,6 +122,7 @@ const translations = {
       footer_terms_title: "Условия",
       footer_terms_privacy: "Политика конфиденциальности",
       footer_terms_terms: "Условия использования",
+      footer_terms_ai: "Условия использования ИИ",
       footer_copy: "© 2025 Gwenchana.app",
     },
     ko: {
@@ -141,7 +140,6 @@ const translations = {
       btn_appstore_pretitle: "앱 스토어에서",
       btn_appstore: "앱스토어",
       btn_googleplay_pretitle: "구글 플레이에서",
-      // btn_googleplay_pretitle: "2025/11월 2일",
       btn_googleplay: "구글 플레이",
       features_title: "왜 Gwenchana?",
       features_multi_title: "다국어 지원",
@@ -163,7 +161,6 @@ const translations = {
       vocab_hint_hide: "탭하여 번역 숨기기",
       vocab_prev: "이전 단어",
       vocab_next: "다음 단어",
-      vocab_progress: "단어",
       faq_title: "FAQ",
       faq_q1: "Gwenchana는 어떤 서비스인가요?",
       faq_a1: "Gwenchana는 어휘 플래시카드, 문법 설명, 연습 문제, AI 튜터를 결합한 한국어 학습 앱입니다. AI 튜터가 선호하는 언어로 문법을 설명하고 예문을 단계별로 분석하며 유용한 팁을 제공합니다. 학습 경로는 KIIP(사회통합) 프로그램 레벨을 기반으로 구성되어 있어 한 단계씩 성장하고 시험을 준비하며 한국 생활에서 더 큰 자신감을 얻을 수 있습니다. 언제 어디서나 학습하세요 — 필요한 모든 것이 여러분 곁에 있습니다",
@@ -188,6 +185,7 @@ const translations = {
       footer_terms_title: "정책",
       footer_terms_privacy: "개인정보 처리방침",
       footer_terms_terms: "서비스 이용약관",
+      footer_terms_ai: "AI 이용 약관",
       footer_copy: "© 2025 Gwenchana.app",
     }
   };
