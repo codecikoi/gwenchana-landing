@@ -19,7 +19,7 @@ const translations = {
       features_multi_title: "Multi-language Support",
       features_multi_desc: "Supports multiple languages with full localization",
       features_auth_title: "Secure Authentication",
-      features_auth_desc: "Log in with Email, Google, or Facebook in seconds",
+      features_auth_desc: "Log in with Email, Google, or Apple in seconds",
       features_vocab_title: "Vocabulary Workouts",
       features_vocab_desc: "Interactive drills and flashcards keep new words fresh",
       features_progress_title: "Progress Tracking",
@@ -82,7 +82,7 @@ const translations = {
       features_multi_title: "Поддержка нескольких языков",
       features_multi_desc: "Локализация интерфейса на нескольких языках",
       features_auth_title: "Безопасная авторизация",
-      features_auth_desc: "Вход по Email, Google или Facebook за секунды",
+      features_auth_desc: "Вход по Email, Google или Apple за секунды",
       features_vocab_title: "Карточки для словарного запаса",
       features_vocab_desc: "Интерактивные упражнения и карточки закрепляют новые слова",
       features_progress_title: "Отслеживание прогресса",  
@@ -145,7 +145,7 @@ const translations = {
       features_multi_title: "다국어 지원",
       features_multi_desc: "여러 언어로 현지화된 인터페이스를 제공합니다",
       features_auth_title: "안전한 로그인",
-      features_auth_desc: "이메일, 구글, 페이스북으로 간편하게 로그인하세요",
+      features_auth_desc: "이메일, 구글, Apple로 간편하게 로그인하세요",
       features_vocab_title: "어휘 트레이닝",
       features_vocab_desc: "상호작용 연습과 플래시카드로 새 단어를 탄탄히",
       features_progress_title: "진행 상황 추적",
@@ -390,6 +390,10 @@ const translations = {
       if (typeof value === 'string') {
         el.textContent = value;
       }
+    });
+    // Show/hide language-specific content blocks
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      el.style.display = el.getAttribute("data-lang") === lang ? '' : 'none';
     });
     localStorage.setItem("lang", lang); // save choice
     // reflect in UI
