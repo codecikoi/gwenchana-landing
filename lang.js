@@ -60,7 +60,7 @@ const translations = {
       footer_terms_privacy: "Privacy Policy",
       footer_terms_terms: "Terms of Service",
       footer_terms_ai: "Terms for using AI",
-      footer_copy: "© 2025 Gwenchana.app",
+      footer_copy: "© 2026 Gwenchana.app",
     },
     ru: {
       nav_features: "Возможности",
@@ -123,7 +123,7 @@ const translations = {
       footer_terms_privacy: "Политика конфиденциальности",
       footer_terms_terms: "Условия использования",
       footer_terms_ai: "Условия использования ИИ",
-      footer_copy: "© 2025 Gwenchana.app",
+      footer_copy: "© 2026 Gwenchana.app",
     },
     ko: {
       nav_features: "기능",
@@ -186,7 +186,7 @@ const translations = {
       footer_terms_privacy: "개인정보 처리방침",
       footer_terms_terms: "서비스 이용약관",
       footer_terms_ai: "AI 이용 약관",
-      footer_copy: "© 2025 Gwenchana.app",
+      footer_copy: "© 2026 Gwenchana.app",
     }
   };
   
@@ -392,7 +392,7 @@ const translations = {
       }
     });
     // Show/hide language-specific content blocks
-    document.querySelectorAll("[data-lang]").forEach(el => {
+    document.querySelectorAll("[data-lang]:not(.lang-option)").forEach(el => {
       el.style.display = el.getAttribute("data-lang") === lang ? '' : 'none';
     });
     localStorage.setItem("lang", lang); // save choice
